@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<title>Knowledge Capture and Discovery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<!-----><link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/back2.png");
+    min-height: 50%;
+    opacity:0.9;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <!--<a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/background-mini.png" height="40px"></a>-->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#audience" class="w3-bar-item w3-button">AUDIENCE</a>
+      <a href="#structure" class="w3-bar-item w3-button"></i> STRUCTURE</a>
+      <a href="#resources" class="w3-bar-item w3-button"></i> RESOURCES</a>
+      <a href="#tutors" class="w3-bar-item w3-button"></i> TUTORS</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#audience" onclick="w3_close()" class="w3-bar-item w3-button">AUDIENCE</a>
+  <a href="#structure" onclick="w3_close()" class="w3-bar-item w3-button">STRUCTURE</a>
+  <a href="#resources" onclick="w3_close()" class="w3-bar-item w3-button">RESOURCES</a>
+  <a href="#tutors" onclick="w3_close()" class="w3-bar-item w3-button">TUTORS</a>
+</nav>
+
+<!-- Header with full-height image w3-grayscale-min-->
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-center w3-text-white" style="padding-top:10%">
+    <span class="w3-jumbo w3-hide-small">Linking, Extending, Exploiting and Enhancing
+Tabular Data with Wikidata </span><br>
+    <h2 style="background-color: #090909e8"> K-CAP 2019, Marina del Rey, Los Angeles</h2>
+  </div>
+
+</header>
+
+<!-- About Section -->
+<div class="w3-container" id="about">
+    <div class="w3-row-padding">
+      <h2 style="padding-top:5%; padding-bottom:2%">About</h2>
+      <p>
+        Knowledge graphs have become a common asset for representing world knowledge in data driven models and applications. In this tutorial participants will learn how to integrate, link and extend tabular data using <a href="https://www.wikidata.org/">Wikidata</a>, a crowdsourced knowledge graph with over 60 million entities and a lively community of curators. The first part of the tutorial presents an overview of Wikidata, its data model and its query and update APIs. The second part presents tools to link tabular datasets to Wikidata, to augment them using Wikidata, to extend Wikidata with new data and to query and visualize the extended Wikidata knowledge graph.
+      </p>
+
+    </div>
+</div>
+<div class="w3-container " id="audience">
+    <div class="w3-row-padding">
+      <h2 style="padding-top:5%; padding-bottom:2%">Audience</h2>
+      <p>This tutorial is designed for those who want to know more about the Wikidata knowledge graph, its data model, useful applications for browsing and visualizing its contents, and how to exploit Wikidata to link and extend existing tabular data.</p>
+      <p>
+        Participants are recommended to have basic knowledge representation skills (RDF) and query language skills (SPARQL). Basic Python skills are necessary to handle the Python Notebooks and APIs used in the hands on exercises.
+      </p>
+    </div>
+</div>
+
+<div class="w3-container " id="structure">
+    <div class="w3-row-padding">
+      <h2 style="padding-top:5%; padding-bottom:2%">Structure</h2>
+      <ul>
+        <li>Introduction to Wikidata (15 minutes)</li>
+            <ul>
+                <li>Goals of the Wikidata project</li>
+                <li>The Wikidata data model</li>
+                <li>Comparison with DBpedia, YAGO and Cyc</li>
+                <li>Interesting statistcs about Wikidata</li>
+            </ul>
+        <li>Getting Data From Wikidata (45 minutes)</li>
+            <ul>
+                <li>API and command-line tools</li>
+                <li>Wikidata SPARQL enpoint</li>
+                <li>Linking data to Wikidata items</li>
+            </ul>
+        <li>Extending Wikidata (45 minutes)</li>
+            <ul>
+                <li>Crowdsourcing, human curation</li>
+                <li>Bots for importing data from databases and for quality assurance</li>
+                <li>Tools to map structured data to Wikidata</li>
+                <li>Wikidata satellites to hold specialized data</li>
+            </ul>
+        <li>Applications (15 minutes)</li>
+            <ul>
+                <li>Visualization: SQID, Reasonator, etc.</li>
+                <li>Wikipedia infoboxes</li>
+                <li>Data enrichment via multi-lingual labels, external identifiers, analytics</li>
+            </ul>
+        <li>Discussion and Hands On (30 minutes)</li>
+            <ul>
+                <li>SPARQL and visualization</li>
+                <li>Wikifier</li>
+            </ul>
+      </ul>
+​
+    
+    </div>
+</div>
+
+<div class="w3-container " id="resources">
+    <div class="w3-row-padding">
+      <h2 style="padding-top:5%; padding-bottom:2%">Resources</h2>
+        To be announced when the dates come closer!
+    </div>
+</div>
+
+<div class="w3-container" id="tutors">
+  <div class="w3-row-padding">
+      <h2 style="padding-top:5%">Tutors</h2>
+       <div class="w3-half w3-margin-bottom">
+          <div class="w3-card w3-center">
+              <img src="images/garijo.png" alt="Daniel Garijo" style="height:250px"/>
+              <div class="w3-container w3-center">
+                  <h3>Daniel Garijo </h3>
+                  <p class="w3-opacity">Computer Scientist, Information Sciences Institute (USC)</p>
+                  <p style="text-align:justify">
+                      Researcher at the Information Sciences Institute of the University of Southern California. He received his PhD at the
+Ontology Engineering Group of the Universidad Politecnica de Madrid. His research is focused on using Semantic Web and Linked Data to facilitate the reuse and understanding of scientific workflows. Daniel has experience in presenting tutorials at international conferences such as Dublin Core and AAAI and universities such as Stanford, UCLA and USC.
+                  </p>
+              </div>
+
+          </div>
+       </div>
+
+    <div class="w3-half w3-margin-bottom">
+          <div class="w3-card w3-center">
+            <img src="images/szekely.jpg" alt="Pedro Szekely" style="height:250px"/>
+
+            <div class="w3-container w3-center">
+              <h3>Pedro Szekely</h3>
+              <p class="w3-opacity">Principal Scientist, Information Sciences Institute (USC)</p>
+              <p style="text-align:justify">
+                      Principal Scientist and Research Director of the Center on Knowledge Graphs at the USC Information Sciences Institute, and a Research Associate Professor at the USC Computer Science Department. His research focuses on table understanding, knowledge graphs and applications of knowledge graphs. He teaches a graduate course at USC on Building Knowledge Graphs, and has given tutorials on knowledge graph construction at KDD, ISWC, AAAI and WWW.
+                  </p>
+            </div>
+
+          </div>
+    </div>
+    </div>
+  <!--</div>-->
+
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>. Background image obtained from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wikidata_nodes_in_white.svg/1808px-Wikidata_nodes_in_white.svg.png">Wikidata.org</a></p>
+</footer>
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
